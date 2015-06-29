@@ -1,6 +1,7 @@
 import sys
 import os
 import urllib2
+import gzip
 from selenium import webdriver
 import time
 
@@ -20,6 +21,18 @@ def retrieveData(captureUrl, fileName):
 	output = open(outputFile,'wb')
 	output.write(data.read())
 	output.close()
+	unzip(outputFile)
+
+def unzip(newGzip):
+	inF = gzip.GzipFile(newGzip, 'rb')
+	s = inF.read()
+	inF.close()
+	
+	outF = file(newGzip[:-3], 'wb')
+	outF.write(s)
+	outF.close()
+
+	os.remove(newGzip) # remove .gz file
 
 def start_page():
 	''' 
