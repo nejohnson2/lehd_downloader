@@ -6,8 +6,10 @@ import time
 
 def retrieveData(captureUrl, fileName):
 	'''
-		With these new links, go to the page and 
-		download the file.
+
+	With these new links, go to the page and 
+	download the file.
+
 	'''
 	captureUrl = captureUrl + fileName
 
@@ -21,16 +23,17 @@ def retrieveData(captureUrl, fileName):
 
 def start_page():
 	''' 
-	    This opens a new chrome page and enters and captures
-	    a bunch of links to download.  These links are census
-	    data from the Longitudinal Employer-Household Dynamics
-	    database.
-	    
-	    Future iterations will include what data to download. Here
-	    we are only downloading NY State and Residential.  These
-	    options are hard-coded.
+	This opens a new chrome page and enters and captures
+	a bunch of links to download.  These links are census
+	data from the Longitudinal Employer-Household Dynamics
+	database.
+	
+	Future iterations will include what data to download. Here
+	we are only downloading NY State and Residential.  These
+	options are hard-coded.
 	
 	'''
+
 	url = 'http://lehd.ces.census.gov/data'
 	captureUrl = 'http://lehd.ces.census.gov/data/lodes/LODES7/ny/rac/'
 
