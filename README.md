@@ -4,8 +4,6 @@ This is a script to download the [Longitudinal Employer-Household Dynamics](http
 
 To run the script:
 
-'''
-
+```
 python downloader.py
-
-'''
+```
