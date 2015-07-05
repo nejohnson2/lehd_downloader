@@ -5,6 +5,18 @@ import gzip
 from selenium import webdriver
 import time
 
+''' 
+	This opens a new chrome page and enters and captures
+	a bunch of links to download.  These links are census
+	data from the Longitudinal Employer-Household Dynamics
+	database.
+	
+	Future iterations will include what data to download. Here
+	we are only downloading NY State and Residential.  These
+	options are hard-coded.
+
+'''
+
 def retrieveData(captureUrl, fileName):
 	'''
 
@@ -35,17 +47,6 @@ def unzip(newGzip):
 	os.remove(newGzip) # remove .gz file
 
 def start_page():
-	''' 
-	This opens a new chrome page and enters and captures
-	a bunch of links to download.  These links are census
-	data from the Longitudinal Employer-Household Dynamics
-	database.
-	
-	Future iterations will include what data to download. Here
-	we are only downloading NY State and Residential.  These
-	options are hard-coded.
-	
-	'''
 
 	url = 'http://lehd.ces.census.gov/data'
 	captureUrl = 'http://lehd.ces.census.gov/data/lodes/LODES7/ny/rac/'
